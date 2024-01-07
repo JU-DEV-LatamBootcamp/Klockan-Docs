@@ -3,14 +3,20 @@
 
 LAYOUT_WITH_LEGEND()
 
-Person(pf, "Profesor", "A customer of the bank, with personal bank accounts.")
-Person(stc, "Student", "A customer of the bank, with personal bank accounts.")
-System(ibs, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
-System_Ext(es, "E-mail system", "The internal Microsoft Exchange e-mail system.")
-System_Ext(mbs, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+Person(pf, "Profesor", "A person who create clases.")
+Person(st, "Student", "A person who want to attend classes.")
+System(spa, "Scheduller and Attendance App", "Allow professors to create and schedule clases.Attendance traker.")
+System_Ext(tpa, "Third party Authentication System", "Manage the user access authentication and autorization..")
+System_Ext(db, "Database", "Stores allinformation about meetings, reports, students and proffesors.")
+System_Ext(css, "Calendar / Scheduler System", "Stores allinformation about meetings, reports, students and proffesors.")
+System_Ext(tpm, "Third party meeting system", "Mettting system. Sync with calendars and send notification to users.")
 
-Rel(pbc, ibs, "Uses")
-Rel(es, pbc, "Sends e-mails to")
-Rel(ibs, es, "Sends e-mails", "SMTP")
-Rel(ibs, mbs, "Uses")
+
+Rel(pf, spa, "Uses")
+Rel(tpm, st, "Sends e-mails to")
+Rel(css, st, "Sends e-mails to")
+Rel(spa, tpa, "Uses")
+Rel(spa, tpm, "Sends e-mails", "SMTP")
+Rel(spa, css, "Sends e-mails", "SMTP")
+Rel(spa, db, "Uses")
 @enduml
