@@ -1,6 +1,6 @@
-## Klockan-Docs
+# Klockan-Docs
 
-# Introduction
+## Introduction
 
 This project was created using [c4builder](https://adrianvlupu.github.io/C4-Builder/)
 
@@ -9,7 +9,8 @@ Open the terminal and run the following commands to start compiling the document
 
 ```bash
 npm i -g c4builder
-c4builder
+c4builder build
+c4builder site
 ```
 
 > Note on using local images inside markdown files
@@ -18,7 +19,7 @@ c4builder
 >
 > All of them will be copied over to the `docs` folder either in `/` (in the case of a single MD/PDF file) or following the same folder structure as in `src`, so make sure they have unique names.  
 
-# Abstractions used
+## Abstractions used
 
 ![C4Model](https://c4model.com/img/abstractions.png)
 
