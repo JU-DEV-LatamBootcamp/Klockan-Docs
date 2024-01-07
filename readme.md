@@ -4,14 +4,27 @@
 
 This project was created using [c4builder](https://adrianvlupu.github.io/C4-Builder/)
 
+#### Requirements
+
+Install npm of computer
 
 Open the terminal and run the following commands to start compiling the documentation
 
 ```bash
 npm i -g c4builder
+```
+
+#### To run 
+
+Open the terminal on Klockan-Docs folder
+
+```bash
 c4builder build
 c4builder site
 ```
+
+
+
 
 > Note on using local images inside markdown files
 >
